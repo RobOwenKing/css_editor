@@ -2,9 +2,29 @@
 <html>
   <head>
     <title>Live CSS Editor</title>
+
+    <style>
+      #io {
+        display: flex;
+      }
+
+      #source, #output {
+        width: 40%;
+      }
+    </style>
   </head>
 
   <body>
     <h1>Live CSS Editor</h1>
+    <div id="io">
+      <div id="source">
+        <textarea name="css" id="css"
+            cols="30" rows="10"
+            placeholder="Enter your CSS here"></textarea>
+      </div>
+      <div id="output">
+        <iframe src=""></iframe>
+      </div>
+    </div>
   </body>
 </html>
