@@ -8,22 +8,23 @@
         display: flex;
       }
 
-      #source, #output {
+      #input, #output {
         width: 40%;
       }
     </style>
+    <script src="./source.js"></script>
   </head>
 
   <body>
     <h1>Live CSS Editor</h1>
     <div id="io">
-      <div id="source">
+      <div id="input">
         <textarea name="css" id="css"
             cols="30" rows="10"
             placeholder="Enter your CSS here"></textarea>
       </div>
       <div id="output">
-        <iframe src=""></iframe>
+        <iframe id="output-user"></iframe>
       </div>
     </div>
   </body>
