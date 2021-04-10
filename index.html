@@ -8,18 +8,55 @@
         background-color: #202040;
       }
 
-      #io {
+/*      #io {
         display: flex;
-      }
+      }*/
 
-      #css {
+/*      #css {
         border: none;
 
+        color: white;
+      }*/
+
+      #input {
+        position: relative;
+        height: 30rem;
+        padding: 0;
+        border: none;
+        margin: 2rem 0;
+      }
+
+      #input #css,
+      #input #highlighted-css {
+        box-sizing: border-box;
+        position: absolute;
+        height: 100%;
+        width: 90%;
+        padding: 0.5em;
+        border: 1px solid black;
+        font-size: 1rem;
+        line-height: 1.3rem;
+        font-family: monospace;
+        white-space: pre;
+        word-wrap: break-word;
+      }
+
+      #input #css {
+        z-index: 1;
+        color: transparent;
+        caret-color: black;
+        background-color: transparent;
+      }
+
+      #input #highlighted-css {
+        z-index: 0;
         background-color: #111122;
         color: white;
       }
     </style>
     <script src="./source.js"></script>
+
+    <!-- Based on code from https://www.horuskol.net/blog/2020-03-05/live-code-highlighting-in-the-browser-with-vanilla-javascript/ -->
   </head>
 
   <body>
@@ -30,6 +67,7 @@
             placeholder="Enter your CSS here"
             spellcheck="false"
             oninput="handleCSSInput()"></textarea>
+        <output id="highlighted-css"></output>
       </div>
       <div id="output">
         <iframe id="output-user"></iframe>
