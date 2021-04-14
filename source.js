@@ -9,7 +9,7 @@ const handleCSSInput = () => {
   cssDisplay.textContent = cssInput.value;
 
   const html = '<p>Test!</p>';
-  const css = `<style>${document.getElementById('css').value}</style>`;
+  const css = `<style>${cssInput.value}</style>`;
 
   outputUser.open();
   outputUser.write(html + css);
