@@ -14,7 +14,7 @@ body {
 
 h1 {
   font-family: sans-serif;
-  background: -webkit-linear-gradient(to right, #ff6363, #ffbd69);
+  background: -webkit-linear-gradient(#ff6363, #ffbd69);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
