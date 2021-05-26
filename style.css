@@ -2,15 +2,19 @@ body {
   background-color: #202040;
 }
 
-/*      #io {
+#container {
   display: flex;
-}*/
+  flex-flow: column;
+  height: 100vh;
+}
 
-/*      #css {
-  border: none;
+header {
+  height: 100px;
+}
 
-  color: white;
-}*/
+#io {
+  flex-grow : 1;
+}
 
 h1 {
   font-family: sans-serif;
@@ -21,7 +25,7 @@ h1 {
 
 #input {
   position: relative;
-  height: 30rem;
+  height: 100%;
   padding: 0;
   border: none;
   margin: 2rem 0;
@@ -45,7 +49,7 @@ h1 {
 #input #css {
   z-index: 1;
   color: transparent;
-  caret-color: black;
+  caret-color: white;
   background-color: transparent;
 }
 

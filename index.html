@@ -8,18 +8,22 @@
   </head>
 
   <body>
-    <h1>Live CSS Editor</h1>
-    <div id="io">
-      <div id="input">
-        <div id="html"></div>
-        <textarea name="css" id="css"
-            placeholder="Enter your CSS here"
-            spellcheck="false"
-            oninput="handleCSSInput()"></textarea>
-        <output id="highlighted-css"></output>
-      </div>
-      <div id="output">
-        <iframe id="output-user"></iframe>
+    <div id="container">
+      <header>
+        <h1>CSS Target Practice</h1>
+      </header>
+      <div id="io">
+        <div id="input">
+          <div id="html"></div>
+          <textarea name="css" id="css"
+              placeholder="Enter your CSS here"
+              spellcheck="false"
+              oninput="handleCSSInput()"></textarea>
+          <output id="highlighted-css"></output>
+        </div>
+        <div id="output">
+          <iframe id="output-user"></iframe>
+        </div>
       </div>
     </div>
 
