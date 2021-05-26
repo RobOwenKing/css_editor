@@ -32,7 +32,8 @@ h1 {
 }
 
 #input #css,
-#input #highlighted-css {
+#input #highlighted-css,
+#input #html {
   box-sizing: border-box;
   position: absolute;
   height: 100%;
@@ -53,7 +54,8 @@ h1 {
   background-color: transparent;
 }
 
-#input #highlighted-css {
+#input #highlighted-css,
+#input #html {
   z-index: 0;
   background-color: #111122;
   color: white;
