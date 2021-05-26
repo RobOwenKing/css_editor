@@ -1,9 +1,28 @@
+const showHTML    = document.getElementById('show-html');
+const showCSS     = document.getElementById('show-css');
 const htmlDisplay = document.getElementById('html');
 const cssInput    = document.getElementById('css');
 const cssDisplay  = document.getElementById('highlighted-css');
 const outputUser  = document.getElementById('output-user').contentWindow.document;
 
 const html = '<p>Test!</p>';
+
+const showHTMLClick = (event) => {
+  htmlDisplay.style.display = 'block';
+  cssDisplay.style.display = 'none';
+  cssInput.style.display = 'none';
+};
+
+const showCSSClick = (event) => {
+  htmlDisplay.style.display = 'none';
+  cssDisplay.style.display = 'block';
+  cssInput.style.display = 'block';
+};
+
+showHTML.addEventListener('click', showHTMLClick);
+showHTML.addEventListener('keydown', showHTMLClick);
+showCSS.addEventListener('click', showCSSClick);
+showCSS.addEventListener('keydown', showCSSClick);
 
 // Initialise the htmlDisplay
 htmlDisplay.innerText = html;
