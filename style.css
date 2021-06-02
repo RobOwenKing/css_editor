@@ -1,3 +1,39 @@
+/* BASIC RESET from https://dev.to/hankchizljaw/a-modern-css-reset-6p3 */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+
+/* UNIQUE STYLING */
+
 body {
   background-color: #202040;
 }
@@ -8,11 +44,9 @@ body {
   height: 100vh;
 }
 
-header {
-  height: 100px;
-}
-
 #io {
+  display: flex;
+  flex-flow: row;
   flex-grow : 1;
 }
 
@@ -21,17 +55,29 @@ h1 {
   background: -webkit-linear-gradient(#ff6363, #ffbd69);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  padding: 1rem 0;
 }
 
 #input {
   position: relative;
-  height: 100%;
+  display: table;
   width: 40%;
+  min-width: 150px;
+  max-width: calc(100vw - 150px);
+  height: 100%;
   padding: 0;
   border: none;
-  margin: 2rem 0;
   overflow: hidden;
   resize: horizontal;
+}
+
+.table-top {
+  height: 2rem;
+  display: table-row;
+}
+
+.table-remaining {
+  display: table-row;
 }
 
 #input #css,
@@ -39,7 +85,6 @@ h1 {
 #input #html {
   box-sizing: border-box;
   position: absolute;
-  height: 100%;
   padding: 0.5em;
   border: 1px solid black;
   font-size: 1rem;
@@ -48,6 +93,7 @@ h1 {
   white-space: pre;
   word-wrap: break-word;
   width: 100%;
+  height: 100%;
 }
 
 #input #css {
@@ -62,4 +108,13 @@ h1 {
   z-index: 0;
   background-color: #111122;
   color: white;
+}
+
+#output {
+  flex-grow: 1;
+}
+
+#output #output-user {
+  width: 100%;
+  height: 100%;
 }

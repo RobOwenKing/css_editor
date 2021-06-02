@@ -14,18 +14,20 @@
       </header>
       <div id="io">
         <div id="input">
-          <div>
+          <div class="table-top">
             <span id="show-html" tabindex="0">HTML</span>
             <span id="show-css" tabindex="0">CSS</span>
           </div>
-          <div id="html"></div>
-          <textarea name="css" id="css"
-              placeholder="Enter your CSS here"
-              spellcheck="false"
-              oninput="handleCSSInput()"
-              style="display: none;"></textarea>
-          <output id="highlighted-css"
-              style="display: none;"></output>
+          <div class="table-remaining">
+            <div id="html"></div>
+            <textarea name="css" id="css"
+                placeholder="Enter your CSS here"
+                spellcheck="false"
+                oninput="handleCSSInput()"
+                style="display: none;"></textarea>
+            <output id="highlighted-css"
+                style="display: none;"></output>
+          </div>
         </div>
         <div id="output">
           <iframe id="output-user"></iframe>
