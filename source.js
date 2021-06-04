@@ -11,12 +11,18 @@ const showHTMLClick = (event) => {
   htmlDisplay.style.display = 'block';
   cssDisplay.style.display = 'none';
   cssInput.style.display = 'none';
+
+  showHTML.classList.add('tab-active');
+  showCSS.classList.remove('tab-active');
 };
 
 const showCSSClick = (event) => {
   htmlDisplay.style.display = 'none';
   cssDisplay.style.display = 'block';
   cssInput.style.display = 'block';
+
+  showHTML.classList.remove('tab-active');
+  showCSS.classList.add('tab-active');
 };
 
 showHTML.addEventListener('click', showHTMLClick);
