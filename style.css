@@ -114,7 +114,8 @@ h1 {
   flex-grow: 1;
 }
 
-#output #output-user {
+#output-user,
+#output-target {
   width: 100%;
   height: 100%;
 }

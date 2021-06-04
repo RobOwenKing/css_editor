@@ -15,8 +15,12 @@
       <div id="io">
         <div id="input">
           <div class="table-top">
-            <span id="show-html" class="tab tab-active" tabindex="0">HTML</span>
-            <span id="show-css" class="tab" tabindex="0">CSS</span>
+            <span id="show-html"
+                class="tab tab-active"
+                tabindex="0">HTML</span>
+            <span id="show-css"
+                class="tab"
+                tabindex="0">CSS</span>
           </div>
           <div class="table-remaining">
             <div id="html"></div>
@@ -30,7 +34,19 @@
           </div>
         </div>
         <div id="output">
-          <iframe id="output-user"></iframe>
+          <div class="table-top">
+            <span id="show-target"
+                class="tab tab-active"
+                tabindex="0">Target</span>
+            <span id="show-user"
+                class="tab"
+                tabindex="0">Your Attempt</span>
+          </div>
+          <div class="table-remaining">
+            <iframe id="output-target"></iframe>
+            <iframe id="output-user"
+                style="display: none;"></iframe>
+          </div>
         </div>
       </div>
     </div>
