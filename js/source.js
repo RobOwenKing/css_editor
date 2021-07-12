@@ -1,5 +1,3 @@
-import { UI } from './javascript/ui.js';
-
 //const showHTML    = document.getElementById('show-html');
 const showCSS     = document.getElementById('show-css');
 const htmlDisplay = document.getElementById('html');
