@@ -1,10 +1,3 @@
-const TargetUI = {
-  home: document.getElementById('home'),
-  app:  document.getElementById('app'),
-
-  challengeForm: document.getElementById('challenge-form')
-};
-
 /**
  * Reveals the challenge selected by the user
  * @param {Event} event - The submit event from addEventListener
