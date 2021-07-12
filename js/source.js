@@ -1,4 +1,5 @@
 //const showHTML    = document.getElementById('show-html');
+const showHTML    = document.getElementById('show-html');
 const showCSS     = document.getElementById('show-css');
 const htmlDisplay = document.getElementById('html');
 const cssInput    = document.getElementById('css');
@@ -17,7 +18,7 @@ const showHTMLClick = (event) => {
   cssDisplay.style.display = 'none';
   cssInput.style.display = 'none';
 
-  UI.showHTML.classList.add('tab-active');
+  showHTML.classList.add('tab-active');
   showCSS.classList.remove('tab-active');
 };
 
@@ -26,12 +27,12 @@ const showCSSClick = (event) => {
   cssDisplay.style.display = 'block';
   cssInput.style.display = 'block';
 
-  UI.showHTML.classList.remove('tab-active');
+  showHTML.classList.remove('tab-active');
   showCSS.classList.add('tab-active');
 };
 
-UI.showHTML.addEventListener('click', showHTMLClick);
-UI.showHTML.addEventListener('keydown', showHTMLClick);
+showHTML.addEventListener('click', showHTMLClick);
+showHTML.addEventListener('keydown', showHTMLClick);
 showCSS.addEventListener('click', showCSSClick);
 showCSS.addEventListener('keydown', showCSSClick);
 
