@@ -1,3 +1,6 @@
+/**
+  Adds an <option> for each challenge to the home screen <select>
+*/
 const buildChallengeSelect = () => {
   TargetOptgroups.forEach((group) => {
     TargetUI.challengeSelect.insertAdjacentHTML('beforeend', `<optgroup label=${group}>`);
@@ -9,6 +12,9 @@ const buildChallengeSelect = () => {
   })
 };
 
+/**
+  Call buildChallengeSelect() once the page is loaded
+*/
 window.onload = function() {
   buildChallengeSelect();
 };
@@ -26,4 +32,7 @@ const formSubmitCallback = (event) => {
   TargetUI.app.hidden  = false;
 };
 
+/**
+  Call formSubmitCallback() when the user clicks the home screen submit button
+*/
 TargetUI.challengeForm.addEventListener('submit', formSubmitCallback);

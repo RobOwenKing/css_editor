@@ -1,5 +1,8 @@
 const TargetOptgroups = [
-  "Tests"
+  "Tests",
+  "Headers and Text",
+  "Buttons",
+  "Forms"
 ];
 
 const TargetChallenges = [
