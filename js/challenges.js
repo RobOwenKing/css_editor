@@ -1,4 +1,8 @@
-const CHALLENGES = [
+const TargetOptgroups = [
+  "Tests"
+];
+
+const TargetChallenges = [
   {
     optgroup: "Tests",
     name: "Test 1",

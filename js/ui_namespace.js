@@ -8,7 +8,8 @@ const TargetUI = {
   app:  document.getElementById('app'),
 
   // Home screen
-  challengeForm: document.getElementById('challenge-form'),
+  challengeForm:   document.getElementById('challenge-form'),
+  challengeSelect: document.getElementById('challenge-select'),
 
   // App screen
   showHTML:    document.getElementById('show-html'),

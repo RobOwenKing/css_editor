@@ -1,3 +1,18 @@
+const buildChallengeSelect = () => {
+  TargetOptgroups.forEach((group) => {
+    TargetUI.challengeSelect.insertAdjacentHTML('beforeend', `<optgroup label=${group}>`);
+    TargetChallenges.filter(challenge => {return challenge.optgroup === group})
+                    .forEach(challenge => {
+                        TargetUI.challengeSelect.insertAdjacentHTML('beforeend', `<option id=${challenge.id}>${challenge.name}</option>`);
+                      })
+    TargetUI.challengeSelect.insertAdjacentHTML('beforeend', `</optgroup>`);
+  })
+};
+
+window.onload = function() {
+  buildChallengeSelect();
+};
+
 /**
  * Reveals the challenge selected by the user
  * @param {Event} event - The submit event from addEventListener
