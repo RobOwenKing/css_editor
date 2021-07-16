@@ -12,45 +12,64 @@
       <header>
         <h1>CSS Target Practice</h1>
       </header>
-      <div id="io">
-        <div id="input">
-          <div class="table-top">
-            <span id="show-html"
-                class="tab tab-active"
-                tabindex="0">HTML</span>
-            <span id="show-css"
-                class="tab"
-                tabindex="0">CSS</span>
+      <div id="home">
+        <form id="challenge-form">
+          <label for="challenge-select">Choose your challenge:</label>
+          <select name="challenges" id="challenge-select" required>
+            <option value="">--Please choose:--</option>
+            <option value="test1">Test 1</option>
+            <option value="test2">Test 2</option>
+            <option value="test3">Test 3</option>
+          </select>
+
+          <input type="submit" value="Go!">
+        </form>
+      </div>
+      <div id="app" hidden>
+        <div id="io">
+          <div id="input">
+            <div class="table-top">
+              <span id="show-html"
+                  class="tab tab-active"
+                  tabindex="0">HTML</span>
+              <span id="show-css"
+                  class="tab"
+                  tabindex="0">CSS</span>
+            </div>
+            <div class="table-remaining">
+              <div id="html"></div>
+              <textarea name="css" id="css"
+                  placeholder="Enter your CSS here"
+                  spellcheck="false"
+                  oninput="handleCSSInput()"
+                  style="display: none;"></textarea>
+              <output id="highlighted-css"
+                  style="display: none;"></output>
+            </div>
           </div>
-          <div class="table-remaining">
-            <div id="html"></div>
-            <textarea name="css" id="css"
-                placeholder="Enter your CSS here"
-                spellcheck="false"
-                oninput="handleCSSInput()"
-                style="display: none;"></textarea>
-            <output id="highlighted-css"
-                style="display: none;"></output>
-          </div>
-        </div>
-        <div id="output">
-          <div class="table-top">
-            <span id="show-target"
-                class="tab tab-active"
-                tabindex="0">Target</span>
-            <span id="show-user"
-                class="tab"
-                tabindex="0">Your Attempt</span>
-          </div>
-          <div class="table-remaining">
-            <iframe id="output-target"></iframe>
-            <iframe id="output-user"
-                style="display: none;"></iframe>
+          <div id="output">
+            <div class="table-top">
+              <span id="show-target"
+                  class="tab tab-active"
+                  tabindex="0">Target</span>
+              <span id="show-user"
+                  class="tab"
+                  tabindex="0">Your Attempt</span>
+            </div>
+            <div class="table-remaining">
+              <iframe id="output-target"></iframe>
+              <iframe id="output-user"
+                  style="display: none;"></iframe>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <script src="./source.js"></script>
+    <script type="text/javascript" src="./js/state.js"></script>
+    <script type="text/javascript" src="./js/challenges.js"></script>
+    <script type="text/javascript" src="./js/ui_namespace.js"></script>
+    <script type="text/javascript" src="./js/home.js"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
   </body>
 </html>
