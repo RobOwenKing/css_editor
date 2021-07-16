@@ -1,58 +1,58 @@
 const html = '<p>Test!</p>';
 
 const showHTMLClick = (event) => {
-  TargetUI.htmlDisplay.style.display = 'block';
-  TargetUI.cssDisplay.style.display = 'none';
-  TargetUI.cssInput.style.display = 'none';
+  CTPUI.htmlDisplay.style.display = 'block';
+  CTPUI.cssDisplay.style.display = 'none';
+  CTPUI.cssInput.style.display = 'none';
 
-  TargetUI.showHTML.classList.add('tab-active');
-  TargetUI.showCSS.classList.remove('tab-active');
+  CTPUI.showHTML.classList.add('tab-active');
+  CTPUI.showCSS.classList.remove('tab-active');
 };
 
 const showCSSClick = (event) => {
-  TargetUI.htmlDisplay.style.display = 'none';
-  TargetUI.cssDisplay.style.display = 'block';
-  TargetUI.cssInput.style.display = 'block';
+  CTPUI.htmlDisplay.style.display = 'none';
+  CTPUI.cssDisplay.style.display = 'block';
+  CTPUI.cssInput.style.display = 'block';
 
-  TargetUI.showHTML.classList.remove('tab-active');
-  TargetUI.showCSS.classList.add('tab-active');
+  CTPUI.showHTML.classList.remove('tab-active');
+  CTPUI.showCSS.classList.add('tab-active');
 };
 
-TargetUI.showHTML.addEventListener('click', showHTMLClick);
-TargetUI.showHTML.addEventListener('keydown', showHTMLClick);
-TargetUI.showCSS.addEventListener('click', showCSSClick);
-TargetUI.showCSS.addEventListener('keydown', showCSSClick);
+CTPUI.showHTML.addEventListener('click', showHTMLClick);
+CTPUI.showHTML.addEventListener('keydown', showHTMLClick);
+CTPUI.showCSS.addEventListener('click', showCSSClick);
+CTPUI.showCSS.addEventListener('keydown', showCSSClick);
 
 const showOutputTargetClick = (event) => {
-  TargetUI.outputTarget.style.display = 'block';
-  TargetUI.outputUser.style.display = 'none';
+  CTPUI.outputTarget.style.display = 'block';
+  CTPUI.outputUser.style.display = 'none';
 
-  TargetUI.showOutputTarget.classList.add('tab-active');
-  TargetUI.showOutputUser.classList.remove('tab-active');
+  CTPUI.showOutputTarget.classList.add('tab-active');
+  CTPUI.showOutputUser.classList.remove('tab-active');
 };
 
 const showOutputUserClick = (event) => {
-  TargetUI.outputTarget.style.display = 'none';
-  TargetUI.outputUser.style.display = 'block';
+  CTPUI.outputTarget.style.display = 'none';
+  CTPUI.outputUser.style.display = 'block';
 
-  TargetUI.showOutputTarget.classList.remove('tab-active');
-  TargetUI.showOutputUser.classList.add('tab-active');
+  CTPUI.showOutputTarget.classList.remove('tab-active');
+  CTPUI.showOutputUser.classList.add('tab-active');
 };
 
-TargetUI.showOutputTarget.addEventListener('click', showOutputTargetClick);
-TargetUI.showOutputTarget.addEventListener('keydown', showOutputTargetClick);
-TargetUI.showOutputUser.addEventListener('click', showOutputUserClick);
-TargetUI.showOutputUser.addEventListener('keydown', showOutputUserClick);
+CTPUI.showOutputTarget.addEventListener('click', showOutputTargetClick);
+CTPUI.showOutputTarget.addEventListener('keydown', showOutputTargetClick);
+CTPUI.showOutputUser.addEventListener('click', showOutputUserClick);
+CTPUI.showOutputUser.addEventListener('keydown', showOutputUserClick);
 
 const handleCSSInput = () => {
-  TargetUI.cssDisplay.textContent = TargetUI.cssInput.value;
+  CTPUI.cssDisplay.textContent = CTPUI.cssInput.value;
 
-  const css = `<style>${TargetUI.cssInput.value}</style>`;
+  const css = `<style>${CTPUI.cssInput.value}</style>`;
 
-  TargetUI.outputUserDoc.open();
-  TargetUI.outputUserDoc.write(html + css);
-  TargetUI.outputUserDoc.close();
+  CTPUI.outputUserDoc.open();
+  CTPUI.outputUserDoc.write(html + css);
+  CTPUI.outputUserDoc.close();
 };
 
 // Initialise the htmlDisplay
-TargetUI.htmlDisplay.innerText = html;
+CTPUI.htmlDisplay.innerText = html;

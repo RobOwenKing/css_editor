@@ -1,11 +1,11 @@
-const TargetOptgroups = [
+const CTPOptgroups = [
   "Tests",
   "Headers and Text",
   "Buttons",
   "Forms"
 ];
 
-const TargetChallenges = [
+const CTPChallenges = [
   {
     optgroup: "Tests",
     name: "Test 1",

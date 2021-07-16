@@ -1,3 +1,3 @@
-const TargetState = {
+const CTPState = {
 
 };

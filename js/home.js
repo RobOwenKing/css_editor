@@ -2,13 +2,13 @@
   Adds an <option> for each challenge to the home screen <select>
 */
 const buildChallengeSelect = () => {
-  TargetOptgroups.forEach((group) => {
-    TargetUI.challengeSelect.insertAdjacentHTML('beforeend', `<optgroup label=${group}>`);
-    TargetChallenges.filter(challenge => {return challenge.optgroup === group})
+  CTPOptgroups.forEach((group) => {
+  CTPUI.challengeSelect.insertAdjacentHTML('beforeend', `<optgroup label=${group}>`);
+    CTPChallenges.filter(challenge => {return challenge.optgroup === group})
                     .forEach(challenge => {
-                        TargetUI.challengeSelect.insertAdjacentHTML('beforeend', `<option value=${challenge.id}>${challenge.name}</option>`);
+                        CTPUI.challengeSelect.insertAdjacentHTML('beforeend', `<option value=${challenge.id}>${challenge.name}</option>`);
                       })
-    TargetUI.challengeSelect.insertAdjacentHTML('beforeend', `</optgroup>`);
+    CTPUI.challengeSelect.insertAdjacentHTML('beforeend', `</optgroup>`);
   })
 };
 
@@ -24,14 +24,14 @@ window.onload = function() {
  * @see formSubmitCallback()
 */
 const setChallenge = () => {
-  const id = TargetUI.challengeSelect.value;
-  TargetState["id"] = id;
+  const id = CTPUI.challengeSelect.value;
+  CTPState["id"] = id;
 
   // Find the challenge selected by its id
-  const challenge = TargetChallenges.find(element => {return element.id == id});
+  const challenge = CTPChallenges.find(element => {return element.id == id});
   // Copy the challenge's html and targetCSS to the state
-  TargetState["html"] = challenge.html;
-  TargetState["targetCSS"] = challenge.targetCSS;
+  CTPState["html"] = challenge.html;
+  CTPState["targetCSS"] = challenge.targetCSS;
 };
 
 /**
@@ -40,15 +40,15 @@ const setChallenge = () => {
 */
 const displayChallenge = () => {
   // Display the challenge's HTML in the input html tab
-  TargetUI.htmlDisplay.textContent = TargetState.html;
+  CTPUI.htmlDisplay.textContent = CTPState.html;
 
   // To write below, we need the css in style tabs
-  const css = `<style>${TargetState.targetCSS}</style>`;
+  const css = `<style>${CTPState.targetCSS}</style>`;
 
   // Display the challenge target in the output section
-  TargetUI.outputTargetDoc.open();
-  TargetUI.outputTargetDoc.write(TargetState.html + css);
-  TargetUI.outputTargetDoc.close();
+  CTPUI.outputTargetDoc.open();
+  CTPUI.outputTargetDoc.write(CTPState.html + css);
+  CTPUI.outputTargetDoc.close();
 };
 
 /**
@@ -63,11 +63,11 @@ const formSubmitCallback = (event) => {
   displayChallenge();
 
   // Hide the home screen and show the challenge
-  TargetUI.home.hidden = true;
-  TargetUI.app.hidden  = false;
+  CTPUI.home.hidden = true;
+  CTPUI.app.hidden  = false;
 };
 
 /**
  * Call formSubmitCallback() when the user clicks the home screen submit button
 */
-TargetUI.challengeForm.addEventListener('submit', formSubmitCallback);
+CTPUI.challengeForm.addEventListener('submit', formSubmitCallback);

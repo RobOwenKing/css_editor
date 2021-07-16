@@ -2,7 +2,7 @@
  * Namespace for all the UI DOM elements our JS needs access to
  * @namespace
 */
-const TargetUI = {
+const CTPUI = {
   // Main screens
   home: document.getElementById('home'),
   app:  document.getElementById('app'),
