@@ -21,6 +21,7 @@ const TargetUI = {
   showOutputTarget: document.getElementById('show-target'),
   showOutputUser:   document.getElementById('show-user'),
   outputTarget:     document.getElementById('output-target'),
+  outputTargetDoc:  document.getElementById('output-target').contentWindow.document,
   outputUser:       document.getElementById('output-user'),
   outputUserDoc:    document.getElementById('output-user').contentWindow.document
 
